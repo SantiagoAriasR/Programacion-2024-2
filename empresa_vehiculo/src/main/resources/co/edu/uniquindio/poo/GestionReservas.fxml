@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.GestionReservasViewController">
+   <children>
+      <Label layoutX="266.0" layoutY="21.0" text="Gestión de Reservas">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFechaInicio" layoutX="117.0" layoutY="95.0" promptText="yyyy-MM-dd" />
+      <Label layoutX="117.0" layoutY="76.0" text="Fecha de inicio de la reserva">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="47.0" layoutY="57.0" prefHeight="9.0" prefWidth="606.0" />
+      <Label layoutX="117.0" layoutY="144.0" text="Fecha final de la reserva">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFechaFinal" layoutX="117.0" layoutY="163.0" promptText="yyyy-MM-dd" />
+      <ChoiceBox fx:id="vehiculoChoiceBox" layoutX="414.0" layoutY="95.0" prefWidth="150.0" />
+      <Label layoutX="415.0" layoutY="76.0" text="Selecciona el Vehículo">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="415.0" layoutY="144.0" text="Selecciona el Cliente">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="ClienteChoiceBox" layoutX="414.0" layoutY="163.0" prefWidth="150.0" />
+      <TableView fx:id="tblListReservas" layoutX="76.0" layoutY="281.0" prefHeight="196.0" prefWidth="549.0">
+        <columns>
+          <TableColumn fx:id="tbcFechaInicio" prefWidth="104.0" text="Fecha Inicio" />
+          <TableColumn fx:id="tbcFechaFinal" prefWidth="96.0" text="Fecha Final" />
+            <TableColumn fx:id="tbcVehiculo" prefWidth="114.0" text="Vehículo" />
+            <TableColumn fx:id="tbcCliente" prefWidth="125.0" text="Cliente" />
+            <TableColumn fx:id="tbcPrecioReserva" prefWidth="109.0" text="Precio Reserva" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregarReserva" layoutX="150.0" layoutY="219.0" mnemonicParsing="false" onAction="#onAgregarReserva" text="Agregar Reserva" />
+      <Button fx:id="btnActualizarReserva" layoutX="419.0" layoutY="219.0" mnemonicParsing="false" onAction="#onActualizarReserva" text="Actualizar Reserva" />
+      <Button fx:id="btnLimpiar" layoutX="191.0" layoutY="489.0" mnemonicParsing="false" onAction="#onLimpiar" text="Limpiar" />
+      <Button fx:id="btnEliminar" layoutX="453.0" layoutY="489.0" mnemonicParsing="false" onAction="#onEliminar" text="Eliminar" />
+   </children>
+</AnchorPane>
